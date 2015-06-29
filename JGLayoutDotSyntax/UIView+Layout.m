@@ -165,7 +165,7 @@
     else constraint = [NSLayoutConstraint constraintWithItem:self attribute:attribute relatedBy:NSLayoutRelationEqual toItem:self attribute:attribute multiplier:0 constant:parameter.currentConstant];
     
     // Sets priority, if specified
-    if (parameter.priority) constraint.priority = parameter.priority;
+    if (parameter.priority) constraint.priority = (float)parameter.priority;    //Added implied float conversion for clarity
     
     // Adds constraint
     [receiver addConstraint:constraint];
