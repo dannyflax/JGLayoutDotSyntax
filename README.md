@@ -39,7 +39,7 @@ The add method takes a CGFloat as an input argument and sets it as the NSLayoutC
 Additionally, JGLayoutDotSyntax allows priority to be specified. In favor of concision, a slightly irregular syntax is used. After a JGLayoutParameter, square backets can be used to specifiy priority of a constraint, if needed. For example, we can lower the priority of centering our subview:
 
 ```objc
-subview.centerX = self.view.centerX[UILayoutPriorityDefaultLow];
+subview.centerX = self.view.centerX[(int)UILayoutPriorityDefaultLow];
 ```
 
 The argument between the brackets should be a UILayoutPriority, which is represented by a positive integer, less than or equal to 1000 (as specified in Apple's NSLayoutConstraint documentation).
@@ -93,7 +93,7 @@ blueView.width = @190;
 
 redView.width = @(size);
 redView.height = @(size);
-redView.centerX = self.view.centerX[UILayoutPriorityDefaultHigh];
+redView.centerX = self.view.centerX[(int)UILayoutPriorityDefaultHigh];
 redView.centerY = self.view.centerY;
 redView.left = [[blueView.right add:@(10)] withRelation:NSLayoutRelationGreaterThanOrEqual];
 
