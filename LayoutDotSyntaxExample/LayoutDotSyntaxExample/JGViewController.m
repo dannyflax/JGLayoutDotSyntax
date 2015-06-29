@@ -76,7 +76,7 @@
     
     redView.width = @(size);
     redView.height = @(size);
-    redView.centerX = self.view.centerX[(int)UILayoutPriorityDefaultHigh];
+    redView.centerX = self.view.centerX[JGLayoutPriorityDefaultHigh];
     redView.centerY = self.view.centerY;
     redView.left = [[blueView.right add:@(10)] withRelation:NSLayoutRelationGreaterThanOrEqual];
     

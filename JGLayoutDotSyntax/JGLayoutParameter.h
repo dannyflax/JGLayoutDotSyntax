@@ -10,6 +10,13 @@
 
 @interface JGLayoutParameter : NSObject <JGLayoutConstruction>
 
+enum JGLayoutPriority{
+    JGLayoutPriorityRequired = (int)UILayoutPriorityRequired,
+    JGLayoutPriorityDefaultHigh = (int)UILayoutPriorityDefaultHigh,
+    JGLayoutPriorityDefaultLow = (int)UILayoutPriorityDefaultLow,
+    JGLayoutPriorityFittingSizeLevel = (int)UILayoutPriorityFittingSizeLevel
+};
+
 @property (nonatomic, readonly) NSLayoutAttribute attribute;
 @property (nonatomic, readonly) NSLayoutRelation relation;
 @property (nonatomic, readonly) id object;
